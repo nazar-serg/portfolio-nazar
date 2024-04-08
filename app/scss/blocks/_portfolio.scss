@@ -1,0 +1,41 @@
+.portfolio {
+	padding-bottom: r(100);
+	&__title {
+		@include adaptiveValue("font-size", 50, 30);
+		line-height: math.div(60, 50);
+		color: #333;
+		font-weight: 700;
+		margin-bottom: r(60);
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: r(40);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__item {
+		img {
+			max-width: 100%;
+			height: r(250);
+			object-fit: cover;
+		}
+		figure {
+			transition: all .2s ease-in-out;
+			&:hover {
+				box-shadow: 0px 4px 13px 4px rgba(0,0,0,0.75);
+			}
+		}
+		figcaption {
+			background-color: #0F0F0F;
+			color: #fff;
+			padding: r(15) r(10);
+			text-align: center;
+			text-transform: capitalize;
+		}
+	}
+}

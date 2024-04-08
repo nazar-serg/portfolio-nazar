@@ -1,0 +1,17 @@
+.button {
+    background-color: #028E97;
+    height: r(59);
+    padding: r(20) r(40);
+    font-size: r(16);
+    line-height: math.div(18, 16);
+    color: $lightColor;
+    text-transform: uppercase;
+    border: r(1) solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+        border: r(1) solid $primmaryBlueColor;
+        background-color: transparent;
+        color: $primmaryBlueColor;
+    }
+}

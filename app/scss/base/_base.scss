@@ -1,0 +1,47 @@
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: r(140);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+a {
+    transition: all .2s ease-in-out;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+.title {
+    @include adaptiveValue("font-size", 40, 22);
+    line-height: math.div(38, 40);
+    font-family: 'Cinnamon';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.text {
+    @include adaptiveValue("font-size", 20, 18);
+    line-height: math.div(32, 20);
+}
+
+
+

@@ -1,0 +1,52 @@
+.hero {
+	padding-top: r(80);
+	position: relative;
+	padding-bottom: r(100);
+	
+	&__title {
+		@include adaptiveValue("font-size", 80, 50);
+		line-height: math.div(90, 80);
+		color: #F2F2F2;
+		font-family: "Georama", sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	&__name {
+		@include adaptiveValue("font-size", 50, 30);
+		line-height: math.div(60, 50);
+		color: #333;
+		font-family: "Georama", sans-serif;
+		font-weight: 700;
+		margin-top: r(-40);
+		margin-bottom: r(40);
+	}
+	&__skills {
+		@include adaptiveValue("font-size", 24, 20);
+		line-height: math.div(34, 24);
+		margin-bottom: r(20);
+	}
+
+	&__item {
+		list-style-type: square;
+		line-height: math.div(30, 20);
+		list-style-position: inside;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: r(40);
+	}
+	&__content {
+		flex: 0 1 60%;
+	}
+	&__image {
+		flex: 0 1 40%;
+		img {
+			width: 100%;
+			height: r(500);
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+}
